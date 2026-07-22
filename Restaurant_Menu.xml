@@ -1,0 +1,67 @@
+<Restaurant_Menu>
+	<Breakfast>
+		<item>
+			<name>POHA</name>
+			<price>30</price>
+		</item>
+		<item>
+			<name>Pancake</name>
+			<price>90</price>
+		</item>
+		<item>
+			<name>Utapa</name>
+			<price>40</price>
+		</item>
+		<item>
+			<name>Idli sambher</name>
+			<price>65</price>
+		</item>
+		<item>
+			<name>Paratha</name>
+			<price>55</price>
+		</item>
+	</Breakfast>
+	<Launch>
+		<item>
+			<name>Puri bhaji</name>
+			<price>105</price>
+		</item>
+		<item>
+			<name>Aaloo paratha</name>
+			<price>75</price>
+		</item>
+		<item>
+			<name>Kaju masala</name>
+			<price>120</price>
+		</item>
+		<item>
+			<name>Kolhapuri veg</name>
+			<price>165</price>
+		</item>
+		<item>
+			<name>Veg biryani</name>
+			<price>200</price>
+		</item>
+	</Launch>
+	<dinner>
+		<name>Dal chaval</name>
+		<price>200</price>
+	</dinner>
+	<dinner>
+		<name>Tandoori chikan</name>
+		<price>190</price>
+	</dinner>
+	<dinner>
+		<name>Rajma masala</name>
+		<price>180</price>
+	</dinner>
+	<dinner>
+		<name>Palak paneer</name>
+		<price>270</price>
+	</dinner>
+	<dinner>
+		<name>Bhandi masala</name>
+		<price>370</price>
+	</dinner>
+</Restaurant_Menu>  
+  
