@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+
+            let eng = Number(document.getElementById("eng").value);
+            let math = Number(document.getElementById("math").value);
+            let sci = Number(document.getElementById("sci").value);
+
+            let total = eng + math + sci;
+
+            let per = (total / 300) * 100;
+
+            document.getElementById("total").innerHTML =
+                "Total = " + total;
+
+            document.getElementById("per").innerHTML =
+                "Percentage = " + per.toFixed(2) + "%";
+                if(per >= 35)
+                {
+            document.getElementById("res").innerHTML =
+                "Result = pass";
+                }
+                else
+                {
+            document.getElementById("res").innerHTML =  
+                    "Result = Fail";
+                } 
+        }
+    </script>
+</head>
+<body>
+        <labbel>English : </labbel>
+        <input type="number" id="eng"><br><br>
+        <label>Math : </label>
+        <input type="number" id="math"><br><br>
+        <label>Science : </label>
+        <input type="number" id="sci"><br><br>
+        <button onclick="add()">Submit</button>
+        <hr>
+        <h2 id="total">Total = </h2>
+        <h2 id="per">Percentage = </h2>
+        <h2 id="res"></h2>
+</body>
+</html>
+    
