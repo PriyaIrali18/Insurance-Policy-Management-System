@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Change Text Color using jQuery</title>
+				<!-- jQuery Library (CDN link) -->
+				<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+				<style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+			</head>
+			<body>
+				<h2>jQuery Example – Change Text Color</h2>
+				<p id="myPara">Name: Priya Basappa Irali.</p>
+				<button id="colorBtn">Change Color</button>
+				<script>
+    // jQuery ready function ensures the code runs after the page is fully loaded
+    $(document).ready(function() {
+      $("#colorBtn").click(function() {
+        // Change the paragraph text color
+        $("#myPara").css("color", "red");
+      });
+    });
+  </script>
+			</body>
+		</html>
+
