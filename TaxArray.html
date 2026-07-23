@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Student Array</title>
+</head>
+<body>
+
+Student Id :
+<input type= "text" id="sid"><br><br>
+
+Student Name :
+<input type= "text"  id="sname"><br><br>
+
+English :
+<input type= "number"  id="eng"><br><br>
+
+Math :
+<input type= "number"  id="math"><br><br>
+
+Science :
+<input type= "number"  id="sci"><br><br>
+
+<button onclick="addStudent()">Submit</button>
+
+<br><br>
+
+<table border="1" style="border-collapse: collapse;"  id="tbl">
+    
+    <tr>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>English</th>
+        <th>Math</th>
+        <th>Science</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Result</th>
+    </tr>
+</table>
+<br>
+<h3 id="Summary"></h3>
+
+<script>
+let students = [];
+let passCount = 0;
+let failCount = 0;
+
+function addStudent() 
+{
+
+        let eng = 
+     Number (document.getElementById("eng").value);
+            let math =
+     Number(document.getElementById("math").value);
+            let sci =
+     Number(document.getElementById("sci").value);
+            
+            let total = eng + math + sci;
+            let per = total / 3;
+
+            let result = " ";
+            let color = "";
+
+            if(per >= 35)
+            
+            {
+                result = "Pass";
+                color = "Green";
+                passCount++;
+            }
+            else
+            {
+                result = "Fail";
+                color = "Red";
+                failCount++;
+            }
+            let student = {
+                id:
+        document.getElementById("sid").value,
+                name:
+        document.getElementById("sname").value,
+                english: eng,
+                math: math,
+                science: sci
+             };
+
+    students.push(student);
+
+    let row = `
+    <tr style="color:${color}">
+        <td>${student.id}</td>
+        <td>${student.name}</td>
+        <td>${eng}</td>
+        <td>${math}</td>
+        <td>${sci}</td>
+        <td>${total}</td>
+        <td>${per.toFixed(2)}%</td>
+        <td>${result}</td>
+     </tr>`;
+
+    document.getElementById("tbl").innerHTML += row;
+
+    document.getElementById("summary").innerHTML =
+        "Total Students : " + students.length + 
+            "<br>Total Pass Students : " + passCount +
+            "<br>Total Fail Students : " + failCount;     
+}
+</script>
+</body>
+</html>
